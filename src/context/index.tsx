@@ -27,9 +27,9 @@ const initialScoreBoard: ScoreBoard = {
 const initialState: StateType = {
   cardList: [],
   filteredCardList: [],
-  chooseLevel: (level: number) => {},
+  chooseLevel: () => {},
   setCardList: () => {},
-  handleClick: (name: string) => {},
+  handleClick: () => {},
   scoreBoard: initialScoreBoard,
   closeModal: () => {},
 };
@@ -108,7 +108,7 @@ export const AppContextProvider = (props: AppContextProviderProps) => {
   }
 
   function closeModal() {
-    setScoreBoard((pre) => ({ selectedCards: [], status: "neutral" }));
+    setScoreBoard({ selectedCards: [], status: "neutral" });
   }
 
   return (
